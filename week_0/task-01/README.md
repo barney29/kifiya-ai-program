@@ -39,10 +39,10 @@ requirment packages
 This directory include the necessary analysis in **jupyter notebook** each jupyter notebook is dedicated into cleaning and making EDA analysis on the repsective dataset.
 
 ## src
-This directory have the customer helper program to help automate the process. 
-Since the business objective is same and the reading(datasets) have same variable I have created a dataframewrapper file which have DataFrameWrapper class
+This directory have the custom helper program to help automate the process. 
+Since the business objective is same and the reading(datasets) have same variables I have created a dataframewrapper file which have DataFrameWrapper class
 
-I assumed the dataset variables are the same but the missing values differ in each datasets so, the **DataFrameWrapper** class recieve the cleaned data
+I assumed the dataset variables are the same but the missing values might differ in each datasets so, the **DataFrameWrapper** class recieve the cleaned data
 
 ### DataFrameWrapper in the jupyter notebook
 
