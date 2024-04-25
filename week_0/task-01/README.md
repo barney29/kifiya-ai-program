@@ -18,9 +18,12 @@ requirment packages
 #Guid to the file structure
 
 **data/**
-All the datasets are in this folder necessary to run the program
+All the datasets are in this folder necessary to run the program\n
+
 **notebooks**
-All the jupyter notebooks Analysis is in this folder
+
+All the jupyter notebooks Analysis is in this folder\n
+
 **src**
 The helper DataFrameWrapper is located on this particular place
 
