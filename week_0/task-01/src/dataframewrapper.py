@@ -33,7 +33,7 @@ class DataFrameWrapper:
     
 
     ##Time series Analysis
-    def main_time_seris_analysis(self):
+    def main_time_seris_analysis(self, default=0):
         # weekly_df = self.df.resample('W').mean()  # Weekly mean
         # monthly_df = self.df.resample('M').mean()  # Monthly mean
 

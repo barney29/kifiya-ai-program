@@ -1,0 +1,56 @@
+﻿MoonLight Energy Solutions
+
+Business Objective
+
+MoonLight Energy Solutions aims to develop a strategic approach to significantly enhance its operational efficiency and sustainability through targeted solar investments. As an Analytics Engineer at MoonLight Energy Solutions, your task is to perform a quick analysis of an environmental measurement provided by the engineering team and translate your observation as a strategy report. Your analysis should focus on identifying key trends and learn valuable insights that will support your data-driven case - your recommendation based on the statistical analysis and EDA.  In particular, your analysis and recommendation must present a strategy focusing on identifying high-potential regions for solar installation that align with the company's long-term sustainability goals. Your report should provide an insight to help realize the overarching objectives of MoonLight Energy Solutions.
+
+
+Introduction
+
+The main purpose of this report is to summarize the analyzed datasets. The datasets that were given are observations about solar radiation with around 19 variables from three places.
+
+1. Benin Malanville
+2. Sierra leone Bunmbuna
+3. Togo dapaong
+
+The analysis is done to find key trends so that it can be use for the long term of the goal of the company.
+
+Data Overview
+
+The structure of the data is as follows
+    • Timestamp (yyyy-mm-dd hh:mm): Date and time of each observation.
+    • GHI (W/m²): Global Horizontal Irradiance, the total solar radiation received per square meter on a horizontal surface.
+    • DNI (W/m²): Direct Normal Irradiance, the amount of solar radiation received per square meter on a surface perpendicular to the rays of the sun.
+    • DHI (W/m²): Diffuse Horizontal Irradiance, solar radiation received per square meter on a horizontal surface that does not arrive on a direct path from the sun.
+    • ModA (W/m²): Measurements from a module or sensor (A), similar to irradiance.
+    • ModB (W/m²): Measurements from a module or sensor (B), similar to irradiance.
+    • Tamb (°C): Ambient Temperature in degrees Celsius.
+    • RH (%): Relative Humidity as a percentage of moisture in the air.
+    • WS (m/s): Wind Speed in meters per second.
+    • WSgust (m/s): Maximum Wind Gust Speed in meters per second.
+    • WSstdev (m/s): Standard Deviation of Wind Speed, indicating variability.
+    • WD (°N (to east)): Wind Direction in degrees from north.
+    • WDstdev: Standard Deviation of Wind Direction, showing directional variability.
+    • BP (hPa): Barometric Pressure in hectopascals.
+    • Cleaning (1 or 0): Signifying whether cleaning (possibly of the modules or sensors) occurred.
+    • Precipitation (mm/min): Precipitation rate measured in millimeters per minute.
+    • TModA (°C): Temperature of Module A in degrees Celsius.
+    • TModB (°C): Temperature of Module B in degrees Celsius.
+    • Comments: This column is designed for any additional notes.
+      Data Quality Check
+The first thing I have done with the data is to clean it.  
+For each analysis I have cleaned the “comment” variable since all of the value was Null(NaN) it was required to use it in anyway so I drop the entire column. 
+Renaming variable: since the short representation is hard to follow I changed them with their actual name.  To avoid ambiguity. Secondly, I have also changed the main variables for the analysis GHI, DNI and DHI from negative value to 0. 
+Finally, after cleaning app the data I have wrapped the data( data frame) to class called DataFrameWrapper so that I can work in one instance of the data to minimize the storage size. For analysis part I have also shrink the data into days, weeks and monthly whenever it feels right. 
+By wrapping the data into the wrapper the data analysis consistency through out the three datasets.
+Time Series Analysis
+Variable GHI
+Global Horizontal Irradiance for Benin after the 5th month, 2022 the reading shows series decrease on the reading from 260 up to 170.
+Global Horizontal Irradiance for Sierra leone the reading starts to decrease from 3rd month, 2022 the reading show series decrease passing the Benin’s minimum and reaching up to 120. after the 08th month of 2022 it shows improvement reaching around 230.
+Global Horizontal Irradiance for Togo show a gradual decremental ranging from 3rd 2022 reaching 150. But, shows an instant increase reaching around 270 with  in two months.
+For variable DNI
+All the three radiation analysis is decreasing most of the time but Togo’s data is better compared to the other the largest DNI value between the three is recorded inside Togo and Benin moreover, after the 9th month 2022 the Togo’s value  is rising while the Benin is falling.
+Which shows a better environment to set our satellite around Togo.
+Correlation  between GHI, DNI, DHI, Tamb, TmoA, TMoB 
+Since the data has been cleaned all the value shows a positive relation among themselves.
+
